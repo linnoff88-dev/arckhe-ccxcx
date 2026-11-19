@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.2 Skills vs Agents | T2</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif}.dark body{background-color:#111827}html:not(.dark) body{background-color:#f8fafc}html:not(.dark) .bg-dark-900{background-color:#fff}html:not(.dark) .bg-dark-800{background-color:#f9fafb}html:not(.dark) .bg-dark-700{background-color:#f3f4f6}html:not(.dark) .bg-dark-600{background-color:#e5e7eb}html:not(.dark) .text-neutral-100{color:#111827}html:not(.dark) .text-neutral-300{color:#4b5563}html:not(.dark) .text-neutral-400{color:#6b7280}html:not(.dark) .text-neutral-500{color:#9ca3af}html:not(.dark) .border-dark-600{border-color:#d1d5db}html:not(.dark) .border-dark-700{border-color:#e5e7eb}html:not(.dark) .text-blue-400{color:#2563eb}html:not(.dark) .bg-blue-500\/20{background-color:rgba(37,99,235,.12)}html:not(.dark) .bg-blue-500\/10{background-color:rgba(37,99,235,.08)}html:not(.dark) .bg-blue-900\/20{background-color:rgba(37,99,235,.06)}html:not(.dark) .border-blue-500\/30{border-color:rgba(37,99,235,.25)}html:not(.dark) .hover\:bg-blue-500\/10:hover{background-color:rgba(37,99,235,.08)}html:not(.dark) .hover\:text-blue-400:hover{color:#2563eb}html:not(.dark) .text-emerald-400{color:#059669}html:not(.dark) .bg-emerald-900\/20{background-color:rgba(5,150,105,.06)}html:not(.dark) .border-emerald-500\/30{border-color:rgba(5,150,105,.25)}html:not(.dark) .hover\:bg-emerald-500\/10:hover{background-color:rgba(5,150,105,.08)}html:not(.dark) .hover\:text-emerald-400:hover{color:#059669}html:not(.dark) .text-purple-400{color:#7c3aed}html:not(.dark) .hover\:bg-purple-500\/10:hover{background-color:rgba(124,58,237,.08)}html:not(.dark) .hover\:text-purple-400:hover{color:#7c3aed}html:not(.dark) .text-red-400{color:#b91c1c}html:not(.dark) .bg-red-900\/20{background-color:rgba(185,28,28,.05)}html:not(.dark) .border-red-500\/30{border-color:rgba(185,28,28,.25)}html:not(.dark) [class*="bg-gradient-to"]{background-image:none!important}html:not(.dark) .text-primary{color:#a16207}html:not(.dark) .bg-primary\/10{background-color:rgba(161,98,7,.08)}html:not(.dark) .border-primary\/40{border-color:rgba(161,98,7,.25)}html:not(.dark) .text-sky-400{color:#0369a1}html:not(.dark) .text-yellow-400{color:#a16207}html:not(.dark) .hover\:text-sky-300:hover{color:#0284c7}html:not(.dark) .hover\:text-yellow-300:hover{color:#854d0e}html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}.dark .border-dark-600{border-color:#374151}</style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-14"><div class="flex items-center space-x-4"><a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🔁</span><span class="font-bold text-lg hidden sm:inline">Tool-Agnostic</span></a><span class="text-neutral-600">|</span><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a></div><div class="flex items-center space-x-1 sm:space-x-2"><a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a><a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Dicas Práticas</span></a><a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Avançado</span></a><button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1z"></path></svg></button></div></div></div></nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span><a href="index.html" class="hover:text-blue-400">T2 Dicas Práticas</a><span>/</span><span class="text-blue-400">Módulo 2.2</span></div></nav>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.2</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">🛠️ Skills compartilhadas vs agents divergentes</h1><p class="text-lg text-neutral-400 max-w-3xl">SKILL.md funciona nos dois. Agents divergem em formato. Onde aproveitar, onde adaptar.</p></div></header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+<section id="topico-1" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">📦 SKILL.md: o formato universal</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">SKILL.md tem YAML frontmatter + corpo markdown. Esse formato é o <strong class="text-blue-400">Agent Skills standard</strong> — funciona em Claude Code, Codex CLI, Cursor, Gemini CLI.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">Campos do frontmatter</h3>
+<ul class="space-y-2 text-neutral-300">
+<li><code class="bg-dark-700 px-1 rounded">name</code> — identificador único</li>
+<li><code class="bg-dark-700 px-1 rounded">description</code> — quando a skill deve ser invocada</li>
+<li><code class="bg-dark-700 px-1 rounded">allowed-tools</code> — quais ferramentas a skill usa</li>
+<li><code class="bg-dark-700 px-1 rounded">disable-model-invocation</code> — true se só invocação manual</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6"><p class="text-neutral-300"><strong class="text-primary">Lição:</strong> uma skill bem escrita vira ativo. Você investe uma vez, qualquer agente lê. Maior alavancagem do curso.</p></div>
+</section>
+
+<section id="topico-2" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">🔀 Migrando skills: copiar de pasta</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Comando único:</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6"><pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono"><code>cp -r .claude/skills/ .agents/skills/
+# ou, melhor ainda:
+ln -s "$(pwd)/.claude/skills" .agents/skills</code></pre></div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><p class="text-neutral-300">Se a skill usa só <code class="bg-dark-700 px-1 rounded">name</code>, <code class="bg-dark-700 px-1 rounded">description</code>, <code class="bg-dark-700 px-1 rounded">allowed-tools</code> e <code class="bg-dark-700 px-1 rounded">disable-model-invocation</code>, funciona sem alteração. Campos Claude-only (path-scoped, hooks) ignorados pelo Codex sem quebrar.</p></div>
+</section>
+
+<section id="topico-3" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">🤖 Agents: markdown vs TOML</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Aqui mora a divergência principal. Diferente filosofia de design, mesma funcionalidade.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-3">Claude (.md)</h4><ul class="space-y-2 text-neutral-300 text-sm"><li>YAML frontmatter</li><li>Corpo markdown = system prompt</li><li>Mais legível como doc</li><li>Comando <code class="bg-dark-700 px-1 rounded text-xs">/agents</code> cria interativo</li></ul></div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h4 class="font-bold text-blue-400 mb-3">Codex (.toml)</h4><ul class="space-y-2 text-neutral-300 text-sm"><li>Campo <code class="bg-dark-700 px-1 rounded text-xs">developer_instructions</code> explícito</li><li>Mais campos opcionais: <code class="bg-dark-700 px-1 rounded text-xs">model</code>, <code class="bg-dark-700 px-1 rounded text-xs">sandbox_mode</code>, <code class="bg-dark-700 px-1 rounded text-xs">mcp_servers</code></li><li>Mais controle granular</li><li>Spawn explícito</li></ul></div>
+</div>
+</section>
+
+<section id="topico-4" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">⚡ Spawn explícito (Codex) vs automático (Claude)</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Diferença que muda workflow: Claude DECIDE quando invocar baseado na <code class="bg-dark-700 px-1 rounded">description</code>. Codex SÓ invoca quando você escreve <code class="bg-dark-700 px-1 rounded">spawn</code>.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-3">Claude: description é trigger</h4><p class="text-sm text-neutral-300 mb-3">Escreva descriptions específicas com "Use when..." pra disparar correto.</p><div class="bg-dark-900 rounded p-2 text-xs font-mono text-neutral-300">description: Use when reviewing PRs to find regressions and missing test coverage</div></div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h4 class="font-bold text-blue-400 mb-3">Codex: spawn é comando</h4><p class="text-sm text-neutral-300 mb-3">Você escreve literalmente. Mais controle, menos surpresa.</p><div class="bg-dark-900 rounded p-2 text-xs font-mono text-neutral-300">spawn pr-reviewer pra revisar o branch atual</div></div>
+</div>
+</section>
+
+<section id="topico-5" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">🔧 Mantendo skills em sincronia</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Sem estratégia explícita, você atualiza skill num lado, esquece do outro, agente B fica com versão velha → bug silencioso.</p>
+<div class="space-y-6 mb-6">
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">A</span></div><div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600"><h4 class="font-semibold text-white mb-2">Symlink (recomendado)</h4><p class="text-sm text-neutral-300"><code class="bg-dark-900 px-1 rounded">ln -s ../.claude/skills .agents/skills</code> — uma fonte só, atualiza em qualquer lado e ambos enxergam.</p></div></div>
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">B</span></div><div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600"><h4 class="font-semibold text-white mb-2">Sync script</h4><p class="text-sm text-neutral-300">Hook PostToolUse no Claude que copia <code class="bg-dark-900 px-1 rounded">.claude/skills/</code> → <code class="bg-dark-900 px-1 rounded">.agents/skills/</code> quando algo muda.</p></div></div>
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">C</span></div><div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600"><h4 class="font-semibold text-white mb-2">Skills só em .agents/skills/ (limpo)</h4><p class="text-sm text-neutral-300">Coloca tudo em <code class="bg-dark-900 px-1 rounded">.agents/skills/</code>, faz <code class="bg-dark-900 px-1 rounded">.claude/skills/</code> ser symlink. Padrão moderno em 2026.</p></div></div>
+</div>
+</section>
+
+<section id="topico-6" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">📐 Padrão narrow agents</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Os melhores subagents são <strong class="text-blue-400">narrow</strong>: um trabalho claro, surface de tools que combina, instruções que evitam drift.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-4">✓ Narrow (bom)</h4><ul class="space-y-2 text-neutral-300 text-sm"><li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><strong>pr-reviewer:</strong> revisa PR, retorna críticos/sugestões/nits</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><strong>dead-code-audit:</strong> varre imports e funções sem caller</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><strong>test-runner:</strong> roda testes específicos e resume</span></li></ul></div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6"><h4 class="font-bold text-red-400 mb-4">✗ Broad (ruim)</h4><ul class="space-y-2 text-neutral-300 text-sm"><li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>helper:</strong> faz qualquer coisa</span></li><li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>developer:</strong> pode editar tudo</span></li><li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>everything-bot:</strong> sem foco</span></li></ul></div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6"><p class="text-neutral-300"><strong class="text-primary">Regra:</strong> se você não consegue descrever o trabalho do agent em 1 frase, ele é broad demais. Quebre em 2 ou 3 narrow.</p></div>
+</section>
+
+<section class="mb-12"><div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📚</span> Resumo</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">SKILL.md é universal</strong><span class="text-neutral-400"> — investimento amortizado</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Migrar skills é literalmente cp</strong><span class="text-neutral-400"> — ou symlink</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Agents divergem em formato (md vs toml)</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Spawn explícito (Codex) vs auto (Claude)</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Symlink ou sync script evita drift</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Narrow > broad agents</strong></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próximo:</h3><p class="text-neutral-300">2.3 — Session handoff entre agentes</p></div>
+<div class="flex flex-col sm:flex-row gap-4"><a href="modulo-2-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Anterior</a><a href="modulo-2-3.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próximo: Session Handoff →</a></div>
+</div></section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Tool-Agnostic AI Coding · INEMA.CLUB · 2026</p></div></footer>
+<script>const themeToggle=document.getElementById('theme-toggle');const tD=document.getElementById('theme-toggle-dark-icon');const tL=document.getElementById('theme-toggle-light-icon');const h=document.documentElement;if(localStorage.getItem('theme')==='light'){tD.classList.remove('hidden');h.classList.remove('dark')}else{tL.classList.remove('hidden')}themeToggle.addEventListener('click',()=>{tD.classList.toggle('hidden');tL.classList.toggle('hidden');h.classList.toggle('dark');localStorage.setItem('theme',h.classList.contains('dark')?'dark':'light')});</script>
+</body></html>

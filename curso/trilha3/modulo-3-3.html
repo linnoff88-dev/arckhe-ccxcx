@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.3 Limpar e Auditar | T3</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif}.dark body{background-color:#111827}html:not(.dark) body{background-color:#f8fafc}html:not(.dark) .bg-dark-900{background-color:#fff}html:not(.dark) .bg-dark-800{background-color:#f9fafb}html:not(.dark) .bg-dark-700{background-color:#f3f4f6}html:not(.dark) .bg-dark-600{background-color:#e5e7eb}html:not(.dark) .text-neutral-100{color:#111827}html:not(.dark) .text-neutral-300{color:#4b5563}html:not(.dark) .text-neutral-400{color:#6b7280}html:not(.dark) .text-neutral-500{color:#9ca3af}html:not(.dark) .border-dark-600{border-color:#d1d5db}html:not(.dark) .border-dark-700{border-color:#e5e7eb}html:not(.dark) .text-purple-400{color:#7c3aed}html:not(.dark) .bg-purple-500\/20{background-color:rgba(124,58,237,.12)}html:not(.dark) .bg-purple-500\/10{background-color:rgba(124,58,237,.08)}html:not(.dark) .bg-purple-900\/20{background-color:rgba(124,58,237,.06)}html:not(.dark) .border-purple-500\/30{border-color:rgba(124,58,237,.25)}html:not(.dark) .hover\:bg-purple-500\/10:hover{background-color:rgba(124,58,237,.08)}html:not(.dark) .hover\:text-purple-400:hover{color:#7c3aed}html:not(.dark) .text-emerald-400{color:#059669}html:not(.dark) .bg-emerald-900\/20{background-color:rgba(5,150,105,.06)}html:not(.dark) .border-emerald-500\/30{border-color:rgba(5,150,105,.25)}html:not(.dark) .hover\:bg-emerald-500\/10:hover{background-color:rgba(5,150,105,.08)}html:not(.dark) .hover\:text-emerald-400:hover{color:#059669}html:not(.dark) .text-blue-400{color:#2563eb}html:not(.dark) .bg-blue-900\/20{background-color:rgba(37,99,235,.06)}html:not(.dark) .border-blue-500\/30{border-color:rgba(37,99,235,.25)}html:not(.dark) .hover\:bg-blue-500\/10:hover{background-color:rgba(37,99,235,.08)}html:not(.dark) .hover\:text-blue-400:hover{color:#2563eb}html:not(.dark) .text-red-400{color:#b91c1c}html:not(.dark) .bg-red-900\/20{background-color:rgba(185,28,28,.05)}html:not(.dark) .border-red-500\/30{border-color:rgba(185,28,28,.25)}html:not(.dark) [class*="bg-gradient-to"]{background-image:none!important}html:not(.dark) .text-primary{color:#a16207}html:not(.dark) .bg-primary\/10{background-color:rgba(161,98,7,.08)}html:not(.dark) .border-primary\/40{border-color:rgba(161,98,7,.25)}html:not(.dark) .text-sky-400{color:#0369a1}html:not(.dark) .text-yellow-400{color:#a16207}html:not(.dark) .hover\:text-sky-300:hover{color:#0284c7}html:not(.dark) .hover\:text-yellow-300:hover{color:#854d0e}html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}.dark .border-dark-600{border-color:#374151}</style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-14"><div class="flex items-center space-x-4"><a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🔁</span><span class="font-bold text-lg hidden sm:inline">Tool-Agnostic</span></a><span class="text-neutral-600">|</span><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a></div><div class="flex items-center space-x-1 sm:space-x-2"><a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a><a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Dicas Práticas</span></a><a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Avançado</span></a><button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1z"></path></svg></button></div></div></div></nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-purple-400">Início</a><span>/</span><a href="index.html" class="hover:text-purple-400">T3</a><span>/</span><span class="text-purple-400">Módulo 3.3</span></div></nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.3</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">🧹 Limpando sessão e auditando com subagentes</h1><p class="text-lg text-neutral-400 max-w-3xl">Context rot é o vilão real. /clear vs /compact vs /usage. Subagent fresh pra auditar. 1M context não é lixão.</p></div></header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+<section id="topico-1" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">🦠 Context rot: o vilão real</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">A maioria das sessões ruins NÃO é modelo fraco. É <strong class="text-purple-400">contexto errado carregado por tempo demais</strong>. Tentativas falhadas, paths obsoletos, info desatualizada — tudo "pesa" no raciocínio.</p>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Sintomas de context rot</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>Modelo sugere "vamos tentar X" — quando X já falhou 3 turns atrás</li>
+<li>Cita arquivo que foi deletado ou renomeado</li>
+<li>Aplica padrão antigo que você corrigiu antes</li>
+<li>Loops em hipóteses já descartadas</li>
+<li>Resposta parece "boa" mas erra detalhes que sessão inicial acertava</li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><p class="text-neutral-300"><strong class="text-emerald-400">Reflexo profissional:</strong> reconhecer rot = limpar &gt; insistir. Contraintuitivo no início, vira hábito depois.</p></div>
+</section>
+
+<section id="topico-2" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">🧽 /clear vs /compact</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h4 class="font-bold text-blue-400 mb-3">/compact</h4><p class="text-sm text-neutral-300 mb-3">Modelo resume a conversa e SUBSTITUI o histórico pela síntese. Você não escolhe o que entra no resumo.</p><div class="text-xs text-neutral-400 mb-2"><strong>Vantagem:</strong> cômodo, automático.</div><div class="text-xs text-neutral-400"><strong>Risco:</strong> resumo pode pular detalhe crítico.</div></div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-3">/clear</h4><p class="text-sm text-neutral-300 mb-3">Você ANOTA o que importa, dispara /clear, começa do zero com seu resumo curado.</p><div class="text-xs text-neutral-400 mb-2"><strong>Vantagem:</strong> contexto exato que VOCÊ quer.</div><div class="text-xs text-neutral-400"><strong>Risco:</strong> mais trabalho.</div></div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6"><p class="text-neutral-300"><strong class="text-primary">Regra prática:</strong> task encerrada (terminei feature) → <code class="bg-dark-700 px-1 rounded">/clear</code> antes da próxima. Sessão longa que ainda não terminou → <code class="bg-dark-700 px-1 rounded">/compact</code> pra ganhar fôlego.</p></div>
+</section>
+
+<section id="topico-3" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">📊 /usage: visibilidade em tempo real</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Comando novo (2026): mostra consumo da sessão em real-time. Permite decisão <strong class="text-purple-400">proativa</strong> em vez de reativa.</p>
+<div class="space-y-6 mb-6">
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">1</span></div><div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600"><h4 class="font-semibold text-white mb-2">Antes de task grande</h4><p class="text-neutral-300 text-sm">Rode <code class="bg-dark-900 px-1 rounded">/usage</code>. Se já está &gt;60%, dá <code class="bg-dark-900 px-1 rounded">/compact</code> antes. Se &lt;40%, segue.</p></div></div>
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">2</span></div><div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600"><h4 class="font-semibold text-white mb-2">Após audit pesada</h4><p class="text-neutral-300 text-sm">Audit jogou 50 arquivos no context. Veja <code class="bg-dark-900 px-1 rounded">/usage</code>. Saltou? Hora de <code class="bg-dark-900 px-1 rounded">/clear</code> e continuar leve.</p></div></div>
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">3</span></div><div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600"><h4 class="font-semibold text-white mb-2">Sinal pra trocar de agente</h4><p class="text-neutral-300 text-sm">Context &gt;75% e ainda não chegou na causa? Faz handoff. O agente novo entra com context limpo (T2 módulo 2.3).</p></div></div>
+</div>
+</section>
+
+<section id="topico-4" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">🔍 Audit por subagent fresh</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">O uso <strong class="text-purple-400">#1 mais lucrativo</strong> de subagent. Em vez de auditar inline (flooda context principal), spawn subagent — ele varre tudo, devolve resumo curto.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h4 class="text-sm font-semibold text-neutral-400 mb-3">Antes (inline — ruim):</h4>
+<pre class="bg-dark-900 rounded-lg p-3 text-xs text-neutral-300 overflow-x-auto font-mono mb-4"><code>Você: "Audite todos os endpoints em src/api/"
+Agente: [lê 50 arquivos]
+       [retorna análise de 5000 linhas no context]
+       [seu context principal agora pesa 80%]</code></pre>
+<h4 class="text-sm font-semibold text-neutral-400 mb-3">Depois (subagent — bom):</h4>
+<pre class="bg-dark-900 rounded-lg p-3 text-xs text-neutral-300 overflow-x-auto font-mono"><code>Você: "Spawn audit-endpoints. Retorne SOMENTE punch list (max 20 itens)."
+Subagent: [lê 50 arquivos em context próprio]
+         [sintetiza]
+Pai: [recebe só as 20 linhas]
+     [context principal: 20% — leve]</code></pre>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><p class="text-neutral-300"><strong class="text-emerald-400">Ganho real:</strong> 5000 → 20 linhas. Você mantém o context principal pra DECISÕES, não pra exploração.</p></div>
+</section>
+
+<section id="topico-5" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">📦 1M context: usar sem virar lixão</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Claude 1M context é tentação. NÃO é convite a guardar tudo. É convite a <strong class="text-purple-400">planejar o que vale</strong>.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6"><h4 class="font-bold text-red-400 mb-4">✗ Anti-pattern</h4><ul class="space-y-2 text-neutral-300 text-sm"><li>Carregar 50 arquivos "por garantia"</li><li>Não dar /clear porque "tem espaço"</li><li>Repetir contexto que já está implícito</li><li>Achar que mais context = melhor resposta</li></ul></div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-4">✓ Padrão correto</h4><ul class="space-y-2 text-neutral-300 text-sm"><li>Carrega só o necessário pra ESTA task</li><li>/clear entre tasks distintas</li><li>Delega exploração pra subagent</li><li>Curadoria &gt; quantidade</li></ul></div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6"><p class="text-neutral-300"><strong class="text-primary">Princípio:</strong> mais context não é melhor decisão. Curadoria de context vence quantidade. Subagent é seu aliado pra delegar exploração sem inchaço.</p></div>
+</section>
+
+<section id="topico-6" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">🔄 Codex worker write-enabled vs Claude Plan</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Diferença filosófica que muda quando usar cada um pra DELEGAR:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h4 class="font-bold text-blue-400 mb-3">Codex: worker write-enabled</h4><p class="text-sm text-neutral-300 mb-3">Codex tem subagent explicitamente marcado como executor write-enabled. Ideal pra:</p><ul class="space-y-1 text-neutral-300 text-sm"><li>• Batch de mudanças paralelas</li><li>• Aplicar mesmo refator em 6 áreas</li><li>• Fan-out de tasks independentes</li></ul></div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-3">Claude: Plan subagent</h4><p class="text-sm text-neutral-300 mb-3">Claude tem subagent dedicado à fase de planejamento. Ideal pra:</p><ul class="space-y-1 text-neutral-300 text-sm"><li>• Pensar antes de executar</li><li>• Estruturar refator complexo</li><li>• Sequência de passos com dependências</li></ul></div>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><p class="text-neutral-300"><strong class="text-emerald-400">Resumo conceitual:</strong> Codex organiza subagents por <strong>unidade de execução</strong>. Claude organiza por <strong>fase de pensamento</strong>. Combina: Claude planeja → Codex executa em paralelo.</p></div>
+</section>
+
+<section class="mb-12"><div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📚</span> Resumo</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Context rot é a causa #1 de sessão ruim</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">/clear &gt; /compact pra encerrar task</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">/usage dá visibilidade pra agir antes do limite</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Audit via subagent = 5000 → 20 linhas no pai</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">1M context não é convite a inchaço</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Codex worker (execução) + Claude Plan (pensamento) — combina</strong></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Próximo:</h3><p class="text-neutral-300">3.4 — Worktrees + 2 terminais em paralelo (fechamento)</p></div>
+<div class="flex flex-col sm:flex-row gap-4"><a href="modulo-3-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Anterior</a><a href="modulo-3-4.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">Próximo: Worktrees + 2 Terminais →</a></div>
+</div></section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Tool-Agnostic AI Coding · INEMA.CLUB · 2026</p></div></footer>
+<script>const themeToggle=document.getElementById('theme-toggle');const tD=document.getElementById('theme-toggle-dark-icon');const tL=document.getElementById('theme-toggle-light-icon');const h=document.documentElement;if(localStorage.getItem('theme')==='light'){tD.classList.remove('hidden');h.classList.remove('dark')}else{tL.classList.remove('hidden')}themeToggle.addEventListener('click',()=>{tD.classList.toggle('hidden');tL.classList.toggle('hidden');h.classList.toggle('dark');localStorage.setItem('theme',h.classList.contains('dark')?'dark':'light')});</script>
+</body></html>

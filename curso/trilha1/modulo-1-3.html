@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.3 .claude/ vs .codex/ | T1 Fundamentos</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Inter',sans-serif}.dark body{background-color:#111827}
+html:not(.dark) body{background-color:#f8fafc}html:not(.dark) .bg-dark-900{background-color:#fff}html:not(.dark) .bg-dark-800{background-color:#f9fafb}html:not(.dark) .bg-dark-700{background-color:#f3f4f6}html:not(.dark) .bg-dark-600{background-color:#e5e7eb}
+html:not(.dark) .text-neutral-100{color:#111827}html:not(.dark) .text-neutral-300{color:#4b5563}html:not(.dark) .text-neutral-400{color:#6b7280}html:not(.dark) .text-neutral-500{color:#9ca3af}
+html:not(.dark) .border-dark-600{border-color:#d1d5db}html:not(.dark) .border-dark-700{border-color:#e5e7eb}
+html:not(.dark) .text-emerald-400{color:#059669}html:not(.dark) .bg-emerald-500\/20{background-color:rgba(5,150,105,.12)}html:not(.dark) .bg-emerald-500\/10{background-color:rgba(5,150,105,.08)}html:not(.dark) .bg-emerald-900\/20{background-color:rgba(5,150,105,.06)}html:not(.dark) .border-emerald-500\/30{border-color:rgba(5,150,105,.25)}html:not(.dark) .hover\:bg-emerald-500\/10:hover{background-color:rgba(5,150,105,.08)}html:not(.dark) .hover\:text-emerald-400:hover{color:#059669}
+html:not(.dark) .text-blue-400{color:#2563eb}html:not(.dark) .bg-blue-900\/20{background-color:rgba(37,99,235,.06)}html:not(.dark) .border-blue-500\/30{border-color:rgba(37,99,235,.25)}html:not(.dark) .hover\:bg-blue-500\/10:hover{background-color:rgba(37,99,235,.08)}html:not(.dark) .hover\:text-blue-400:hover{color:#2563eb}
+html:not(.dark) .text-purple-400{color:#7c3aed}html:not(.dark) .hover\:bg-purple-500\/10:hover{background-color:rgba(124,58,237,.08)}html:not(.dark) .hover\:text-purple-400:hover{color:#7c3aed}
+html:not(.dark) .text-red-400{color:#b91c1c}html:not(.dark) .bg-red-900\/20{background-color:rgba(185,28,28,.05)}html:not(.dark) .border-red-500\/30{border-color:rgba(185,28,28,.25)}
+html:not(.dark) [class*="bg-gradient-to"]{background-image:none!important}
+html:not(.dark) .text-primary{color:#a16207}html:not(.dark) .bg-primary\/10{background-color:rgba(161,98,7,.08)}html:not(.dark) .border-primary\/40{border-color:rgba(161,98,7,.25)}
+html:not(.dark) .text-sky-400{color:#0369a1}html:not(.dark) .text-yellow-400{color:#a16207}html:not(.dark) .hover\:text-sky-300:hover{color:#0284c7}html:not(.dark) .hover\:text-yellow-300:hover{color:#854d0e}
+html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
+.dark .border-dark-600{border-color:#374151}
+</style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4"><a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🔁</span><span class="font-bold text-lg hidden sm:inline">Tool-Agnostic</span></a><span class="text-neutral-600">|</span><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a></div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Dicas Práticas</span></a>
+<a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Avançado</span></a>
+<button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></button>
+</div></div></div></nav>
+
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-emerald-400">Início</a><span>/</span><a href="index.html" class="hover:text-emerald-400">T1 Fundamentos</a><span>/</span><span class="text-emerald-400">Módulo 1.3</span></div></nav>
+
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">📁 Anatomia: .claude/ vs .codex/</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Onde tudo mora: skills, agents, settings, hooks. Mapa lado a lado dos dois mundos pra você bater o olho e saber onde mexer.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">35</div><div class="text-xs text-neutral-400">Minutos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Prático</div><div class="text-xs text-neutral-400">Tipo</div></div>
+</div></div></header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+<section id="topico-1" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">📂 Estrutura do .claude/</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">A pasta <code class="bg-dark-700 px-2 py-0.5 rounded">.claude/</code> é onde Claude Code procura tudo do projeto. Convenção sobre configuração — não precisa apontar paths.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono"><code>.claude/
+├── skills/                 # SKILL.md (markdown + YAML)
+│   ├── revisar-pr/
+│   │   └── SKILL.md
+│   └── deploy-check/
+│       └── SKILL.md
+├── agents/                 # Subagents (markdown + YAML frontmatter)
+│   ├── pr-reviewer.md
+│   └── test-runner.md
+├── hooks/                  # Scripts de evento
+│   ├── pre-edit.sh
+│   └── post-tool.sh
+├── settings.json           # Config (commit)
+└── settings.local.json     # Config local (gitignore)</code></pre>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<p class="text-neutral-300"><strong class="text-primary">Regra:</strong> <code class="bg-dark-700 px-1 rounded">settings.json</code> commitado (regras pro time), <code class="bg-dark-700 px-1 rounded">settings.local.json</code> NO .gitignore (suas preferências pessoais).</p>
+</div>
+</section>
+
+<section id="topico-2" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">📁 Estrutura do .codex/</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">A pasta <code class="bg-dark-700 px-2 py-0.5 rounded">.codex/</code> tem filosofia diferente: <strong class="text-emerald-400">TOML</strong> ao invés de markdown. Mais explícito, menos amigável visualmente.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono"><code>.codex/
+├── config.toml             # Config (TOML)
+└── agents/                 # Subagents (TOML, um por arquivo)
+    ├── pr-reviewer.toml
+    └── test-runner.toml
+
+.agents/                    # SKILLS ficam fora — padrão aberto
+└── skills/
+    └── revisar-pr/
+        └── SKILL.md</code></pre>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> Diferença sutil mas importante</h3>
+<p class="text-neutral-300">Skills no Codex moram em <code class="bg-dark-700 px-1 rounded">.agents/skills/</code> (não em <code class="bg-dark-700 px-1 rounded">.codex/skills/</code>) — é o padrão aberto Agent Skills, então qualquer agente (Cursor, Gemini) também encontra ali.</p>
+</div>
+</section>
+
+<section id="topico-3" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">🤝 Skills: o lado bom</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">SKILL.md é o ponto de convergência. <strong class="text-emerald-400">Mesmo arquivo</strong> funciona em Claude Code, Codex CLI, Cursor e Gemini CLI. É o Agent Skills standard.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h4 class="text-sm font-semibold text-neutral-400 mb-3">Anatomia de SKILL.md:</h4>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono"><code>---
+name: revisar-pr
+description: Revisa PR aberto procurando regressões, código duplicado e cobertura faltante
+allowed-tools: [Read, Grep, Bash]
+disable-model-invocation: false
+---
+
+# Skill: Revisar PR
+
+Quando invocada, faça:
+1. Liste arquivos mudados (git diff main...HEAD --name-only)
+2. Para cada um, analise diff procurando:
+   - Funções sem teste
+   - Imports não usados
+   - Edge cases não cobertos
+3. Retorne markdown com seções "Críticos", "Sugestões", "Nits"</code></pre>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<p class="text-neutral-300"><strong class="text-emerald-400">Investimento amortizado:</strong> escreva uma vez, usa em qualquer agente. Maior alavancagem prática do curso.</p>
+</div>
+</section>
+
+<section id="topico-4" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">⚡ Agents: o lado divergente</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Subagents é onde os formatos divergem mais. Claude usa markdown puro (corpo = system prompt). Codex usa TOML com campo explícito.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-4">Claude: pr-reviewer.md</h4>
+<pre class="bg-dark-900 rounded-lg p-3 text-xs text-neutral-300 overflow-x-auto font-mono"><code>---
+name: pr-reviewer
+description: Revisa PRs
+tools: [Read, Bash]
+---
+
+Você revisa PRs procurando
+regressões e código duplicado.
+
+Sempre retorne markdown com:
+- Críticos
+- Sugestões
+- Nits</code></pre>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">Codex: pr-reviewer.toml</h4>
+<pre class="bg-dark-900 rounded-lg p-3 text-xs text-neutral-300 overflow-x-auto font-mono"><code>name = "pr-reviewer"
+description = "Revisa PRs"
+model = "gpt-5-pro"
+sandbox_mode = "read-only"
+developer_instructions = """
+Você revisa PRs procurando
+regressões e código duplicado.
+
+Sempre retorne markdown com:
+- Críticos
+- Sugestões
+- Nits
+"""</code></pre>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<p class="text-neutral-300"><strong class="text-primary">Mesma informação, formatos diferentes:</strong> markdown body vira <code class="bg-dark-700 px-1 rounded">developer_instructions</code>. YAML frontmatter vira campos TOML. Conversão é determinística — IA faz por você.</p>
+</div>
+</section>
+
+<section id="topico-5" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">🌍 Global vs projeto</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Ambos suportam 2 escopos. Cada um serve a um propósito — confundir gera duplicação ou conflito.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<table class="w-full text-sm">
+<thead><tr class="text-left text-neutral-400 border-b border-dark-600"><th class="pb-3">Path</th><th class="pb-3">Escopo</th><th class="pb-3">O que vai</th></tr></thead>
+<tbody class="text-neutral-300">
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">~/.claude/skills/</td><td>Global</td><td>Skills genéricas (revisão, formatação, doc)</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">./.claude/skills/</td><td>Projeto</td><td>Skills específicas (deploy desse projeto)</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">~/.codex/agents/</td><td>Global</td><td>Subagents pessoais</td></tr>
+<tr><td class="py-2 font-mono text-xs">./.codex/agents/</td><td>Projeto</td><td>Subagents do time</td></tr>
+</tbody>
+</table>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<p class="text-neutral-300"><strong class="text-emerald-400">Regra de precedência:</strong> projeto sobrescreve global. Se você tem skill <code class="bg-dark-700 px-1 rounded">deploy</code> em ambos, a do projeto vence.</p>
+</div>
+</section>
+
+<section id="topico-6" class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">🗺️ Cheat sheet de conversão</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">A tabela pra colar na parede. Bate o olho, sabe onde mexer.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<table class="w-full text-sm">
+<thead><tr class="text-left text-neutral-400 border-b border-dark-600"><th class="pb-3">Claude Code</th><th class="pb-3">↔</th><th class="pb-3">Codex CLI</th></tr></thead>
+<tbody class="text-neutral-300">
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">CLAUDE.md</td><td class="text-emerald-400">↔</td><td class="py-2 font-mono text-xs">AGENTS.md</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">.claude/skills/</td><td class="text-emerald-400">↔</td><td class="py-2 font-mono text-xs">.agents/skills/</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">.claude/agents/X.md</td><td class="text-emerald-400">↔</td><td class="py-2 font-mono text-xs">.codex/agents/X.toml</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">settings.json</td><td class="text-emerald-400">↔</td><td class="py-2 font-mono text-xs">config.toml</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2 font-mono text-xs">.claude/hooks/</td><td class="text-red-400">⚠️</td><td class="py-2 font-mono text-xs">(sem equivalente)</td></tr>
+<tr><td class="py-2 font-mono text-xs">/agents</td><td class="text-emerald-400">↔</td><td class="py-2 font-mono text-xs">spawn (manual)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Atenção: hooks</h3>
+<p class="text-neutral-300">Claude tem hooks programáveis (PreToolUse, PostToolUse, SessionStart) que Codex NÃO tem equivalente direto. Se seu workflow depende muito de hooks, mantenha Claude pra esse caso ou modele como skill invocável.</p>
+</div>
+</section>
+
+<section class="mb-12">
+<div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📚</span> Resumo do Módulo</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">.claude/ tem skills, agents, hooks, settings</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">.codex/ tem config.toml + agents/*.toml</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Skills moram em .agents/skills/ (padrão aberto)</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Markdown (Claude) vs TOML (Codex) — mesma informação</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Global vs projeto: projeto sobrescreve</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Hooks não têm paridade — único ponto sem conversão</strong></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-emerald-400 mb-2">Próxima Trilha:</h3><p class="text-neutral-300">T2 Dicas Práticas — começa convertendo um projeto Claude → Codex de verdade</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="modulo-1-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo anterior</a>
+<a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próxima trilha: Dicas Práticas →</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Tool-Agnostic AI Coding · INEMA.CLUB · 2026</p></div></footer>
+<script>
+const themeToggle=document.getElementById('theme-toggle');const tD=document.getElementById('theme-toggle-dark-icon');const tL=document.getElementById('theme-toggle-light-icon');const h=document.documentElement;
+if(localStorage.getItem('theme')==='light'){tD.classList.remove('hidden');h.classList.remove('dark')}else{tL.classList.remove('hidden')}
+themeToggle.addEventListener('click',()=>{tD.classList.toggle('hidden');tL.classList.toggle('hidden');h.classList.toggle('dark');localStorage.setItem('theme',h.classList.contains('dark')?'dark':'light')});
+</script>
+</body></html>
