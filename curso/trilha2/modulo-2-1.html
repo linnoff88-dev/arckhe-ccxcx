@@ -2,7 +2,7 @@
 <html lang="pt-BR" class="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2.1 Convertendo Claude → Codex | T2</title>
+<title>2.1 Convertendo Claude â†’ Codex | T2</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,62 +25,62 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
 
-<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-14"><div class="flex items-center space-x-4"><a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🔁</span><span class="font-bold text-lg hidden sm:inline">Tool-Agnostic</span></a><span class="text-neutral-600">|</span><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a></div><div class="flex items-center space-x-1 sm:space-x-2"><a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a><a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Dicas Práticas</span></a><a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Avançado</span></a><button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1z"></path></svg></button></div></div></div></nav>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-14"><div class="flex items-center space-x-4"><a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">ðŸ”</span><span class="font-bold text-lg hidden sm:inline">Tool-Agnostic</span></a><span class="text-neutral-600">|</span><a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a></div><div class="flex items-center space-x-1 sm:space-x-2"><a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a><a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Dicas PrÃ¡ticas</span></a><a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">AvanÃ§ado</span></a><button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1z"></path></svg></button></div></div></div></nav>
 
-<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span><a href="index.html" class="hover:text-blue-400">T2 Dicas Práticas</a><span>/</span><span class="text-blue-400">Módulo 2.1</span></div></nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-blue-400">InÃ­cio</a><span>/</span><a href="index.html" class="hover:text-blue-400">T2 Dicas PrÃ¡ticas</a><span>/</span><span class="text-blue-400">MÃ³dulo 2.1</span></div></nav>
 
-<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.1</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">🔁 Convertendo Claude Code → Codex</h1><p class="text-lg text-neutral-400 max-w-3xl">O prompt único que migra o projeto. Checklist pós-migração. Configurando project_doc_fallback. Armadilhas e validação.</p><div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl"><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">50</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Médio</div><div class="text-xs text-neutral-400">Nível</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Hands-on</div><div class="text-xs text-neutral-400">Tipo</div></div></div></div></header>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.1</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ” Convertendo Claude Code â†’ Codex</h1><p class="text-lg text-neutral-400 max-w-3xl">O prompt Ãºnico que migra o projeto. Checklist pÃ³s-migraÃ§Ã£o. Configurando project_doc_fallback. Armadilhas e validaÃ§Ã£o.</p><div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl"><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">50</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">MÃ©dio</div><div class="text-xs text-neutral-400">NÃ­vel</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Hands-on</div><div class="text-xs text-neutral-400">Tipo</div></div></div></div></header>
 
 <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
 <section id="topico-1" class="mb-16">
-<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">🪄 O prompt mágico de conversão</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Um prompt único, copy/paste, que converte o projeto inteiro em <strong class="text-blue-400">um turn</strong>. Refinado do vídeo do Nate Herk com adições da documentação oficial.</p>
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">ðŸª„ O prompt mÃ¡gico de conversÃ£o</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Um prompt Ãºnico, copy/paste, que converte o projeto inteiro em <strong class="text-blue-400">um turn</strong>. Refinado do vÃ­deo do Nate Herk com adiÃ§Ãµes da documentaÃ§Ã£o oficial.</p>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Cole isso no Claude Code (ou Codex):</h3>
-<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono whitespace-pre-wrap"><code>Construí este projeto com Claude Code. Preciso que o Codex também consiga usar.
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono whitespace-pre-wrap"><code>ConstruÃ­ este projeto com Claude Code. Preciso que o Codex tambÃ©m consiga usar.
 
-Faça em ordem:
-1. Pesquise documentação atual de Codex CLI (AGENTS.md, .codex/, agents TOML)
+FaÃ§a em ordem:
+1. Pesquise documentaÃ§Ã£o atual de Codex CLI (AGENTS.md, .codex/, agents TOML)
 2. Pesquise como funciona @import no Claude Code
-3. Crie AGENTS.md a partir do CLAUDE.md mantendo apenas conteúdo UNIVERSAL
+3. Crie AGENTS.md a partir do CLAUDE.md mantendo apenas conteÃºdo UNIVERSAL
    (code style, build/test commands, project structure, boundaries)
-4. Refatore CLAUDE.md pra começar com @AGENTS.md + só seções Claude-only
+4. Refatore CLAUDE.md pra comeÃ§ar com @AGENTS.md + sÃ³ seÃ§Ãµes Claude-only
    (hooks, permission, path-scoped rules)
 5. Crie .codex/config.toml com project_doc_fallback_filenames=["CLAUDE.md"]
 6. Para cada arquivo .claude/agents/*.md, gere .codex/agents/*.toml equivalente
-   (markdown body → developer_instructions)
-7. Copie .claude/skills/ para .agents/skills/ (mantém SKILL.md original)
-8. Hooks Claude não têm equivalente direto no Codex — documente em README
+   (markdown body â†’ developer_instructions)
+7. Copie .claude/skills/ para .agents/skills/ (mantÃ©m SKILL.md original)
+8. Hooks Claude nÃ£o tÃªm equivalente direto no Codex â€” documente em README
 9. Atualize .gitignore: settings.local.json continua ignorado
 
-NÃO mexa em nada fora de .claude/, .codex/, .agents/, CLAUDE.md, AGENTS.md.
+NÃƒO mexa em nada fora de .claude/, .codex/, .agents/, CLAUDE.md, AGENTS.md.
 Mostre diff de cada arquivo criado/alterado antes de aplicar.</code></pre>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que esse prompt funciona</h3>
-<p class="text-neutral-300">Tem 3 ingredientes: (1) pesquisa explícita antes (evita uso de info desatualizada), (2) ordem clara dos passos (não inverte), (3) limite de escopo (não-mexer-em-X) — evita refator surpresa.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">ðŸ’¡</span> Por que esse prompt funciona</h3>
+<p class="text-neutral-300">Tem 3 ingredientes: (1) pesquisa explÃ­cita antes (evita uso de info desatualizada), (2) ordem clara dos passos (nÃ£o inverte), (3) limite de escopo (nÃ£o-mexer-em-X) â€” evita refator surpresa.</p>
 </div>
 </section>
 
 <section id="topico-2" class="mb-16">
-<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">📝 Checklist pós-migração</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Antes de confiar, valida. Sem checklist você descobre o que faltou só quando o Codex quebra:</p>
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">ðŸ“ Checklist pÃ³s-migraÃ§Ã£o</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Antes de confiar, valida. Sem checklist vocÃª descobre o que faltou sÃ³ quando o Codex quebra:</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 1</div><h4 class="font-semibold mb-1">AGENTS.md criado e enxuto</h4><p class="text-xs text-neutral-400">Universal só. Sem hooks, sem regras temporárias.</p></div>
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 2</div><h4 class="font-semibold mb-1">CLAUDE.md começa com @AGENTS.md</h4><p class="text-xs text-neutral-400">DRY aplicado. Resto: só Claude-only.</p></div>
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 3</div><h4 class="font-semibold mb-1">.codex/config.toml com fallback</h4><p class="text-xs text-neutral-400">Codex lê CLAUDE.md se AGENTS.md sumir.</p></div>
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 4</div><h4 class="font-semibold mb-1">Cada agent Claude virou TOML Codex</h4><p class="text-xs text-neutral-400">developer_instructions com markdown body.</p></div>
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 5</div><h4 class="font-semibold mb-1">.agents/skills/ tem cópia das skills</h4><p class="text-xs text-neutral-400">Ou symlink pra .claude/skills/.</p></div>
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 6</div><h4 class="font-semibold mb-1">Hooks documentados em README</h4><p class="text-xs text-neutral-400">Codex não tem equivalente — registre o gap.</p></div>
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 7</div><h4 class="font-semibold mb-1">.gitignore ok</h4><p class="text-xs text-neutral-400">settings.local.json e .codex/local.toml ignorados.</p></div>
-<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">✓ 8</div><h4 class="font-semibold mb-1">Smoke test passou</h4><p class="text-xs text-neutral-400">Primeiro spawn no Codex deu output aderente.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 1</div><h4 class="font-semibold mb-1">AGENTS.md criado e enxuto</h4><p class="text-xs text-neutral-400">Universal sÃ³. Sem hooks, sem regras temporÃ¡rias.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 2</div><h4 class="font-semibold mb-1">CLAUDE.md comeÃ§a com @AGENTS.md</h4><p class="text-xs text-neutral-400">DRY aplicado. Resto: sÃ³ Claude-only.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 3</div><h4 class="font-semibold mb-1">.codex/config.toml com fallback</h4><p class="text-xs text-neutral-400">Codex lÃª CLAUDE.md se AGENTS.md sumir.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 4</div><h4 class="font-semibold mb-1">Cada agent Claude virou TOML Codex</h4><p class="text-xs text-neutral-400">developer_instructions com markdown body.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 5</div><h4 class="font-semibold mb-1">.agents/skills/ tem cÃ³pia das skills</h4><p class="text-xs text-neutral-400">Ou symlink pra .claude/skills/.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 6</div><h4 class="font-semibold mb-1">Hooks documentados em README</h4><p class="text-xs text-neutral-400">Codex nÃ£o tem equivalente â€” registre o gap.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 7</div><h4 class="font-semibold mb-1">.gitignore ok</h4><p class="text-xs text-neutral-400">settings.local.json e .codex/local.toml ignorados.</p></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><div class="text-blue-400 font-bold mb-1">âœ“ 8</div><h4 class="font-semibold mb-1">Smoke test passou</h4><p class="text-xs text-neutral-400">Primeiro spawn no Codex deu output aderente.</p></div>
 </div>
 </section>
 
 <section id="topico-3" class="mb-16">
-<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">🔄 project_doc_fallback_filenames</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Sua arma secreta pra testar Codex em projeto Claude existente: 1 linha em <code class="bg-dark-700 px-1 rounded">~/.codex/config.toml</code> e <strong class="text-blue-400">zero migração</strong>.</p>
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">ðŸ”„ project_doc_fallback_filenames</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Sua arma secreta pra testar Codex em projeto Claude existente: 1 linha em <code class="bg-dark-700 px-1 rounded">~/.codex/config.toml</code> e <strong class="text-blue-400">zero migraÃ§Ã£o</strong>.</p>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono"><code># ~/.codex/config.toml
 project_doc_fallback_filenames = ["CLAUDE.md", "COPILOT.md"]</code></pre>
@@ -90,15 +90,15 @@ project_doc_fallback_filenames = ["CLAUDE.md", "COPILOT.md"]</code></pre>
 <ol class="space-y-2 text-neutral-300 list-decimal list-inside">
 <li>Ativa fallback hoje (1 minuto)</li>
 <li>Usa Codex no projeto Claude existente por 1-2 semanas</li>
-<li>Decide se Codex vale o esforço de migração formal</li>
-<li>Se sim, roda o prompt mágico do tópico 1</li>
+<li>Decide se Codex vale o esforÃ§o de migraÃ§Ã£o formal</li>
+<li>Se sim, roda o prompt mÃ¡gico do tÃ³pico 1</li>
 </ol>
 </div>
 </section>
 
 <section id="topico-4" class="mb-16">
-<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">🧪 Convertendo um agent específico</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Quando você precisa converter UM agent (não o projeto inteiro), o padrão é direto. Sabendo a anatomia, você revisa o output da IA.</p>
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">ðŸ§ª Convertendo um agent especÃ­fico</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Quando vocÃª precisa converter UM agent (nÃ£o o projeto inteiro), o padrÃ£o Ã© direto. Sabendo a anatomia, vocÃª revisa o output da IA.</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><h4 class="font-semibold mb-3 text-emerald-400">Antes: .claude/agents/audit.md</h4><pre class="bg-dark-900 rounded p-3 text-xs text-neutral-300 overflow-x-auto font-mono"><code>---
 name: audit
@@ -106,76 +106,76 @@ description: Audita dead code
 tools: [Read, Grep, Bash]
 ---
 
-Procure imports não usados,
-funções sem caller, TODOs
+Procure imports nÃ£o usados,
+funÃ§Ãµes sem caller, TODOs
 antigos. Retorne lista de
-até 20 itens, priorizada.</code></pre></div>
+atÃ© 20 itens, priorizada.</code></pre></div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-5"><h4 class="font-semibold mb-3 text-blue-400">Depois: .codex/agents/audit.toml</h4><pre class="bg-dark-900 rounded p-3 text-xs text-neutral-300 overflow-x-auto font-mono"><code>name = "audit"
 description = "Audita dead code"
 sandbox_mode = "read-only"
 developer_instructions = """
-Procure imports não usados,
-funções sem caller, TODOs
+Procure imports nÃ£o usados,
+funÃ§Ãµes sem caller, TODOs
 antigos. Retorne lista de
-até 20 itens, priorizada.
+atÃ© 20 itens, priorizada.
 """</code></pre></div>
 </div>
-<div class="bg-primary/10 rounded-xl border border-primary/40 p-6"><p class="text-neutral-300"><strong class="text-primary">Regra de revisão:</strong> verifique se (a) <code class="bg-dark-700 px-1 rounded">developer_instructions</code> tem o corpo markdown sem truncar, (b) tools viram <code class="bg-dark-700 px-1 rounded">sandbox_mode</code> apropriado, (c) o nome bate.</p></div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6"><p class="text-neutral-300"><strong class="text-primary">Regra de revisÃ£o:</strong> verifique se (a) <code class="bg-dark-700 px-1 rounded">developer_instructions</code> tem o corpo markdown sem truncar, (b) tools viram <code class="bg-dark-700 px-1 rounded">sandbox_mode</code> apropriado, (c) o nome bate.</p></div>
 </section>
 
 <section id="topico-5" class="mb-16">
-<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">⚠️ Armadilhas comuns</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Os 5 erros mais frequentes na migração — cada um custa pelo menos 1h de debug se você não souber antes:</p>
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">âš ï¸ Armadilhas comuns</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Os 5 erros mais frequentes na migraÃ§Ã£o â€” cada um custa pelo menos 1h de debug se vocÃª nÃ£o souber antes:</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6"><h4 class="font-bold text-red-400 mb-4">✗ Armadilhas</h4><ul class="space-y-3 text-neutral-300 text-sm">
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6"><h4 class="font-bold text-red-400 mb-4">âœ— Armadilhas</h4><ul class="space-y-3 text-neutral-300 text-sm">
 <li class="flex items-start space-x-2"><span class="text-red-400">1</span><span>Esperar hooks Claude no Codex</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">2</span><span>Duplicar conteúdo em CLAUDE.md e AGENTS.md (sem @import)</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">2</span><span>Duplicar conteÃºdo em CLAUDE.md e AGENTS.md (sem @import)</span></li>
 <li class="flex items-start space-x-2"><span class="text-red-400">3</span><span>Esquecer de copiar skills pra .agents/skills/</span></li>
 <li class="flex items-start space-x-2"><span class="text-red-400">4</span><span>Slash commands Claude (/agents) usados como no Codex</span></li>
 <li class="flex items-start space-x-2"><span class="text-red-400">5</span><span>Ignorar project_doc_fallback_filenames</span></li>
 </ul></div>
-<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-4">✓ Soluções</h4><ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-emerald-400">1</span><span>Documente hooks como skill invocável no Codex</span></li>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-4">âœ“ SoluÃ§Ãµes</h4><ul class="space-y-3 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">1</span><span>Documente hooks como skill invocÃ¡vel no Codex</span></li>
 <li class="flex items-start space-x-2"><span class="text-emerald-400">2</span><span>@AGENTS.md no topo do CLAUDE.md</span></li>
 <li class="flex items-start space-x-2"><span class="text-emerald-400">3</span><span>Symlink: <code class="bg-dark-700 px-1 rounded text-xs">ln -s ../.claude/skills .agents/skills</code></span></li>
-<li class="flex items-start space-x-2"><span class="text-emerald-400">4</span><span>No Codex use <code class="bg-dark-700 px-1 rounded text-xs">spawn</code> explícito</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">4</span><span>No Codex use <code class="bg-dark-700 px-1 rounded text-xs">spawn</code> explÃ­cito</span></li>
 <li class="flex items-start space-x-2"><span class="text-emerald-400">5</span><span>Configura o fallback de cara, ganha 2 semanas</span></li>
 </ul></div>
 </div>
 </section>
 
 <section id="topico-6" class="mb-16">
-<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">✅ Validando com smoke test</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Checklist é necessário mas não suficiente. Faça um <strong class="text-blue-400">smoke test real</strong>: peça pro Codex uma task que exige saber as convenções do projeto.</p>
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">âœ… Validando com smoke test</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Checklist Ã© necessÃ¡rio mas nÃ£o suficiente. FaÃ§a um <strong class="text-blue-400">smoke test real</strong>: peÃ§a pro Codex uma task que exige saber as convenÃ§Ãµes do projeto.</p>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h4 class="text-sm font-semibold text-neutral-400 mb-3">Smoke test sugerido:</h4>
-<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono whitespace-pre-wrap"><code>Liste todos os módulos exportados em src/. Para cada um, indique:
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto font-mono whitespace-pre-wrap"><code>Liste todos os mÃ³dulos exportados em src/. Para cada um, indique:
 - Path
-- 1 linha do que faz (lendo o código)
+- 1 linha do que faz (lendo o cÃ³digo)
 - Se tem teste em tests/ correspondente
 
-Use o code style do projeto. Não modifique arquivos.</code></pre>
+Use o code style do projeto. NÃ£o modifique arquivos.</code></pre>
 </div>
-<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><p class="text-neutral-300"><strong class="text-emerald-400">Sinais de sucesso:</strong> Codex usa nomenclatura correta dos módulos (não inventa), respeita "não modifique" (não fura), output segue formato pedido. Se sim, AGENTS.md foi bem escrito.</p></div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><p class="text-neutral-300"><strong class="text-emerald-400">Sinais de sucesso:</strong> Codex usa nomenclatura correta dos mÃ³dulos (nÃ£o inventa), respeita "nÃ£o modifique" (nÃ£o fura), output segue formato pedido. Se sim, AGENTS.md foi bem escrito.</p></div>
 </section>
 
 <section class="mb-12">
 <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📚</span> Resumo do Módulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸ“š</span> Resumo do MÃ³dulo</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">1 prompt único migra o projeto</strong><span class="text-neutral-400"> — com pesquisa explícita + ordem + escopo</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Checklist de 8 itens valida pós-migração</strong></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">project_doc_fallback = migração zero-cost</strong></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Agents .md → .toml é determinístico</strong></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Hooks Claude não têm paridade</strong></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Smoke test real é a única validação honesta</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-white">1 prompt Ãºnico migra o projeto</strong><span class="text-neutral-400"> â€” com pesquisa explÃ­cita + ordem + escopo</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-white">Checklist de 8 itens valida pÃ³s-migraÃ§Ã£o</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-white">project_doc_fallback = migraÃ§Ã£o zero-cost</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-white">Agents .md â†’ .toml Ã© determinÃ­stico</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-white">Hooks Claude nÃ£o tÃªm paridade</strong></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-white">Smoke test real Ã© a Ãºnica validaÃ§Ã£o honesta</strong></div></div>
 </div>
-<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próximo Módulo:</h3><p class="text-neutral-300">2.2 — Skills compartilhadas vs agents divergentes</p></div>
-<div class="flex flex-col sm:flex-row gap-4"><a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a><a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próximo: Skills vs Agents →</a></div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">PrÃ³ximo MÃ³dulo:</h3><p class="text-neutral-300">2.2 â€” Skills compartilhadas vs agents divergentes</p></div>
+<div class="flex flex-col sm:flex-row gap-4"><a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">â† Voltar para Trilha</a><a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrÃ³ximo: Skills vs Agents â†’</a></div>
 </div>
 </section>
 
 </main>
-<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Tool-Agnostic AI Coding · INEMA.CLUB · 2026</p></div></footer>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Tool-Agnostic AI Coding Â· ARCKHÉ AI Â· 2026</p></div></footer>
 <script>const themeToggle=document.getElementById('theme-toggle');const tD=document.getElementById('theme-toggle-dark-icon');const tL=document.getElementById('theme-toggle-light-icon');const h=document.documentElement;if(localStorage.getItem('theme')==='light'){tD.classList.remove('hidden');h.classList.remove('dark')}else{tL.classList.remove('hidden')}themeToggle.addEventListener('click',()=>{tD.classList.toggle('hidden');tL.classList.toggle('hidden');h.classList.toggle('dark');localStorage.setItem('theme',h.classList.contains('dark')?'dark':'light')});</script>
 </body></html>
